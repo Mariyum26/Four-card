@@ -1,0 +1,111 @@
+
+body{
+    display:flex;
+    flex-direction:column;
+    font-family: 'Poppins', sans-serif;
+    align-items:center;
+    background-color:hsl(0, 0%, 98%);
+}
+*{
+    margin:0;
+    padding:0;
+}
+.heading-one{
+    font-weight: 200;
+    margin: 30px 0 0px;
+    padding:0;
+}
+.sub-heading{
+    width:40%;
+    text-align: center;
+    color:#A9A9A9;
+    margin: 15px 0 40px;
+}
+.grid-container{
+    width:75%;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,90px);
+    gap:20px;
+}
+.item{
+    padding:20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.item h4{
+    padding: 8px 0; 
+    font-weight:600;
+}
+.item p{
+    font-size: 12px;
+    color:#C0C0C0;
+    margin-bottom:30px;
+}
+.item img{
+    float:right;
+}
+
+.team-builder{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end:3;
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+.supervisor{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:2;
+    grid-row-end: 4;
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+.karma{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+.calculator{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+@media only screen and (max-width:400px) {
+body{
+    padding: 20px;
+}
+.heading-one{
+    font-size: 28px;
+}
+  .heading-two{
+    font-size:28px;
+  }
+.sub-heading{
+    width:100%;
+}
+.grid-container{
+    width:100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  grid-template-areas:'teambuilder'
+    'supervisor'
+    'karma'
+    'calculator';
+}
+.team-builder{
+    grid-area:teambuilder;
+}
+.supervisor{
+    grid-area:supervisor;
+}
+.karma{
+    grid-area:karma;
+  }
+.calculator{
+    grid-area:calculator;
+}
+}
